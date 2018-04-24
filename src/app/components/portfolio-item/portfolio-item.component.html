@@ -1,8 +1,10 @@
-
+<div *ngIf="producto">
+  
+  
   <header class="rk-portfolio-cover  item-inside-1">
     <div class="item-inside__meta">
-      <h1 class="ae-u-bolder rk-portfolio-title ">Essential Stationery</h1>
-      <p class="ae-theta rk-portfolio-category ">Branding</p>
+      <h1 class="ae-u-bolder rk-portfolio-title ">{{producto.producto}}</h1>
+      <p class="ae-theta rk-portfolio-category ">{{producto.categoria}}</p>
     </div>
   </header>
   <div class="ae-container-fluid">
@@ -20,9 +22,9 @@
   <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
       <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-        <h4 class="ae-u-bolder">Left Box Text</h4>
-        <p class="ae-eta">A series of essential stationery format to showcase your branding projects. </p>
-        <p class="ae-eta">It includes a A6 flyer, A5 folder, A4 horizontal paper and a business card mockup. You can easily put your own graphics and create a new layout according to your needs.</p>
+        <h4 class="ae-u-bolder">{{producto.subtitulo1}}</h4>
+        <p class="ae-eta">{{producto.desc1}} </p>
+       
       </div>
       <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/img/inner-1.jpg" alt="Urku Portfolio"></div>
     </div>
@@ -36,9 +38,9 @@
     </div>
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
       <div class="ae-grid__item item-lg-8 item-lg--offset-2">
-        <h4 class="ae-u-bolder">Full Wide Text</h4>
-        <p class="ae-eta">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="ae-eta">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        <h4 class="ae-u-bolder">{{producto.subtitulo2}}</h4>
+        <p class="ae-eta">{{producto.desc2}}</p>
+        
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
@@ -74,3 +76,4 @@
             <use xlink:href="assets/img/symbols.svg#arrow"></use>
           </svg></span></a></div>
   </div>
+</div>
