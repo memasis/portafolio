@@ -10,7 +10,8 @@ import { ProductosService} from '../../services/productos.service'
 export class PortfolioItemComponent {
 
   producto:any = undefined;
-
+  cod:string = undefined;
+  fecha:number = new Date().getFullYear();
  constructor ( private route:ActivatedRoute,
 private _ps: ProductosService ) {
 
@@ -22,7 +23,7 @@ private _ps: ProductosService ) {
       _ps.cargar_producto( parametros['id'])
           .subscribe( res => {
 
-            
+            this.cod = parametros['id'];
             this.producto = res.json();
             console.log( this.producto );
 
