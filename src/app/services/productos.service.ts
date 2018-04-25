@@ -15,8 +15,19 @@ export class ProductosService {
   }
 
   public buscar_producto( termino:string ){
+    
+    console.log("Buscando producto");
+    console.log( this.productos.length );
 
-    this.cargar_productos();
+    if(this.productos.length === 0){
+       this.cargar_productos();
+    }
+
+    this.productos.forEach(prod =>{
+
+      console.log( prod );
+ 
+    })
 
   }
 
