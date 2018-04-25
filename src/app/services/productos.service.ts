@@ -5,9 +5,16 @@ import { Http } from '@angular/http';
 export class ProductosService {
 
   productos:any[] = [];
+  productos_filtrado:any[] = [];
   cargando:boolean = true;
 
   constructor( private http:Http ) { 
+
+    this.cargar_productos();
+
+  }
+
+  public buscar_producto( termino:string ){
 
     this.cargar_productos();
 

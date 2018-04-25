@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styles: []
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
+  termino:string = undefined;
+  constructor(private route:ActivatedRoute) { 
 
-  constructor() { }
+    route.params.subscribe( parametros =>{
 
-  ngOnInit() {
+      this.termino = parametros['termino'];
+      console.log(this.termino);
+
+    });
+
   }
+
 
 }

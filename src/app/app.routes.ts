@@ -15,7 +15,7 @@ const app_routes: Routes = [
 {path: 'about', component: AboutComponent},
 {path: 'producto/:id', component: PortfolioItemComponent},
 {path: 'buscar/:termino', component: SearchComponent},
-{path: '**', pathMatch: 'full', redirectTo: 'home'}
+{path: '**', pathMatch: 'full', redirectTo: 'Home'}
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes, {useHash:true});
