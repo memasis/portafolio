@@ -12,8 +12,8 @@ export class PortfolioItemComponent {
   producto:any = undefined;
   cod:string = undefined;
   fecha:number = new Date().getFullYear();
- constructor ( private route:ActivatedRoute,
-private _ps: ProductosService ) {
+ constructor ( public route:ActivatedRoute,
+  public _ps: ProductosService ) {
 
     route.params.subscribe( parametros =>{
 
